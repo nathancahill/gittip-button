@@ -1,7 +1,7 @@
 Gittip Button
 =============
 
-![Screenshot](https://raw2.github.com/nathancahill/gittip-extension/master/gittip_screen.png "Screenshot")
+![Screenshot](https://raw.github.com/nathancahill/gittip-extension/master/screenshot.png "Screenshot")
 
 Gittip Button for Github. Added via Chrome and Firefox extensions:
 
