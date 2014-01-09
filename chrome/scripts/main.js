@@ -2,21 +2,17 @@ function injectGittipButton() {
     var username = getUsername();
 
     if (username !== null) {
-         $.ajax({
-            'url': 'https://apiweb.io/api/nathancahill/gittip/' + username
-        }).done(function(gittipUser) {
-            var donations = gittipUser.receives;
+        $.ajax({
+            'url': 'https://www.gittip.com/' + username + '/public.json',
+            'success': function(gittipUser) {
+                var donations = gittipUser.receiving;
+                var signed_in = $('.signin').length === 0;
 
-            if (donations == 'N/A') {
-                donations = '0.00';
-            }
-
-            var signed_in = $('.signin').length === 0;
-
-            if ($('.vcard').length > 0) {
-                injectGittipButtonUser(username, donations, signed_in);
-            } else {
-                injectGittipButtonRepo(username, donations, signed_in);
+                if ($('.vcard').length > 0) {
+                    injectGittipButtonUser(username, donations, signed_in);
+                } else {
+                    injectGittipButtonRepo(username, donations, signed_in);
+                }
             }
         });
     }
