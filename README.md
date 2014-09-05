@@ -1,3 +1,6 @@
+Broken after recent Github UI changes.<br />
+Use the official button here: https://github.com/gratipay/Gratipay-Everywhere
+
 Gittip Button
 =============
 
